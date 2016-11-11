@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6CAFC0C6-A428-4d30-A9F9-700E829FEA51</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>MyApplication</AssemblyName>
+    <Name>Plaster</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="docs\" />
+    <Folder Include="docs\en-US\" />
+    <Folder Include="examples\" />
+    <Folder Include="examples\RecurseFile\" />
+    <Folder Include="examples\RecurseFile\a\" />
+    <Folder Include="examples\RecurseFile\a\b\" />
+    <Folder Include="examples\RecurseFile\a\c\" />
+    <Folder Include="examples\RecurseTemplateFile\" />
+    <Folder Include="examples\RecurseTemplateFile\a\" />
+    <Folder Include="src\" />
+    <Folder Include="src\en-US\" />
+    <Folder Include="src\Schema\" />
+    <Folder Include="src\Templates\" />
+    <Folder Include="src\Templates\NewDscResourceScript\" />
+    <Folder Include="src\Templates\NewModule\" />
+    <Folder Include="src\Templates\NewModule\docs\" />
+    <Folder Include="src\Templates\NewModule\docs\en-US\" />
+    <Folder Include="src\Templates\NewModule\editor\" />
+    <Folder Include="src\Templates\NewModule\editor\VSCode\" />
+    <Folder Include="src\Templates\NewModule\license\" />
+    <Folder Include="src\Templates\NewModule\src\" />
+    <Folder Include="src\Templates\NewModule\test\" />
+    <Folder Include="test\" />
+    <Folder Include="test\Recurse\" />
+    <Folder Include="test\Recurse\a\" />
+    <Folder Include="test\Recurse\a\b\" />
+    <Folder Include="test\Recurse\a\c\" />
+    <Folder Include="test\Recurse\a\c\d\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appveyor.yml" />
+    <Compile Include="build.ps1" />
+    <Compile Include="build.psake.ps1" />
+    <Compile Include="build.settings.ps1" />
+    <Compile Include="CHANGELOG.md" />
+    <Compile Include="debugHarness.ps1" />
+    <Compile Include="docs\DesignNotes.md" />
+    <Compile Include="docs\en-US\about_Plaster.help.md" />
+    <Compile Include="docs\en-US\about_Plaster_CreatingAManifest.help.md" />
+    <Compile Include="docs\en-US\Invoke-Plaster.md" />
+    <Compile Include="docs\en-US\New-PlasterManifest.md" />
+    <Compile Include="docs\en-US\Plaster.md" />
+    <Compile Include="docs\en-US\Test-PlasterManifest.md" />
+    <Compile Include="examples\plasterManifest.xml" />
+    <Compile Include="examples\plasterManifest_fr-FR.xml" />
+    <Compile Include="examples\README.md" />
+    <Compile Include="examples\RecurseFile\a\b\baz.txt" />
+    <Compile Include="examples\RecurseFile\a\c\test.ini" />
+    <Compile Include="examples\RecurseFile\foo.txt" />
+    <Compile Include="examples\RecurseTemplateFile\a\bar.txt" />
+    <Compile Include="LICENSE" />
+    <Compile Include="README.md" />
+    <Compile Include="ReleaseNotes.md" />
+    <Compile Include="ScriptAnalyzerSettings.psd1" />
+    <Compile Include="src\en-US\Plaster.Resources.psd1" />
+    <Compile Include="src\InvokePlaster.ps1" />
+    <Compile Include="src\NewPlasterManifest.ps1" />
+    <Compile Include="src\Plaster.psd1" />
+    <Compile Include="src\Plaster.psm1" />
+    <Compile Include="src\Schema\PlasterManifest-v1.xsd" />
+    <Compile Include="src\Templates\NewDscResourceScript\plasterManifest.xml" />
+    <Compile Include="src\Templates\NewDscResourceScript\resource.ps1" />
+    <Compile Include="src\Templates\NewModule\build.ps1" />
+    <Compile Include="src\Templates\NewModule\build.psake.ps1" />
+    <Compile Include="src\Templates\NewModule\build.settings.ps1" />
+    <Compile Include="src\Templates\NewModule\docs\en-US\about_Module.help.md" />
+    <Compile Include="src\Templates\NewModule\docs\en-US\about_Module.help.txt" />
+    <Compile Include="src\Templates\NewModule\editor\VSCode\settings.json" />
+    <Compile Include="src\Templates\NewModule\editor\VSCode\tasks_pester.json" />
+    <Compile Include="src\Templates\NewModule\editor\VSCode\tasks_psake.json" />
+    <Compile Include="src\Templates\NewModule\editor\VSCode\tasks_psake_pester.json" />
+    <Compile Include="src\Templates\NewModule\license\Apache.txt" />
+    <Compile Include="src\Templates\NewModule\license\MIT.txt" />
+    <Compile Include="src\Templates\NewModule\plasterManifest.xml" />
+    <Compile Include="src\Templates\NewModule\ReleaseNotes.md" />
+    <Compile Include="src\Templates\NewModule\ScriptAnalyzerSettings.psd1" />
+    <Compile Include="src\Templates\NewModule\src\Module.psm1" />
+    <Compile Include="src\Templates\NewModule\test\Module.T.ps1" />
+    <Compile Include="src\Templates\NewModule\test\Shared.ps1" />
+    <Compile Include="src\Templates\NewModule\_gitignore" />
+    <Compile Include="src\TestPlasterManifest.ps1" />
+    <Compile Include="test\ConditionEval.Tests.ps1" />
+    <Compile Include="test\ExpandFileSourceSpec.Tests.ps1" />
+    <Compile Include="test\InvokePlaster.Tests.ps1" />
+    <Compile Include="test\ModuleManifest.Tests.ps1" />
+    <Compile Include="test\NewPlasterManifest.Tests.ps1" />
+    <Compile Include="test\PlasterManifestValidation.Tests.ps1" />
+    <Compile Include="test\Recurse\a\bar.txt" />
+    <Compile Include="test\Recurse\a\b\baz.txt" />
+    <Compile Include="test\Recurse\a\c\d\gilead.txt" />
+    <Compile Include="test\Recurse\a\c\test.ini" />
+    <Compile Include="test\Recurse\empty.txt" />
+    <Compile Include="test\Recurse\foo.txt" />
+    <Compile Include="test\RequireModule.Tests.ps1" />
+    <Compile Include="test\Shared.ps1" />
+    <Compile Include="test\TemplateFile.Tests.ps1" />
+    <Compile Include="test\TestPlasterManifest.Tests.ps1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="Build" />
+</Project>
